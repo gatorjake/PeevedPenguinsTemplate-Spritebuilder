@@ -14,7 +14,4 @@
     CCLOG(@"play button pressed");
 }
 
-int var; number = 9;
-NSLog var; number;
-
 @end
