@@ -124,7 +124,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string></string>
+						<string>BearBody</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -274,7 +274,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string></string>
+						<string>BearAnimatedArm</string>
 					</dict>
 					<dict>
 						<key>name</key>
