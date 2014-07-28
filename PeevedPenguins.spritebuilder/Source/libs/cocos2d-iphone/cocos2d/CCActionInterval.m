@@ -98,7 +98,7 @@
 	 ];
 }
 
-/*-(void) startWithTarget:(id)aTarget
+-(void) startWithTarget:(id)aTarget
 {
 	[super startWithTarget:aTarget];
 	_elapsed = 0.0f;
@@ -110,7 +110,7 @@
 	NSAssert(NO, @"CCIntervalAction: reverse not implemented.");
 	return nil;
 }
-*/@end
+@end
 
 //
 // Sequence
