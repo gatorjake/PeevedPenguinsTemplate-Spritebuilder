@@ -12,6 +12,7 @@
     CCPhysicsNode *_physicsNode;
     CCNode *_catapultArm;
     CCNode *_levelNode;
+    CCButton *_retry;
 }
 
 // is called when CCB file has completed loading
@@ -49,6 +50,10 @@
 - (void)retry {
     // reload this level
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
+    // ensure followed object is in visible area when starting
+    self.position = ccp(0, 0);
+    CCActionFollow *follow = [CCActionFollow actionWithTarget:_retry worldBoundary:self.boundingBox];
+    [self runAction:follow];
 }
 
 @end
