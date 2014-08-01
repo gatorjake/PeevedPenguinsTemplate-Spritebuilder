@@ -32,6 +32,8 @@
     // nothing shall collide with our invisible nodes
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
+    //Collision Delegate
+    _physicsNode.collisionDelegate = self;
 }
 
 // called on every touch in this scene
@@ -126,6 +128,11 @@
 {
     // when touches are cancelled, meaning the user drags their finger off the screen or onto something else, release the catapult
     [self releaseCatapult];
+}
+
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB
+{
+    CCLOG(@"Something collided with a seal! [And this came in before EXC_BAD_ACCESS or SIGBART]!");
 }
 
 @end
